@@ -1,0 +1,7 @@
+name = "mindful-break-reminder"
+version = "0.1.0"
+authors = ["Hammed <hamsohood@gmail.com>"]
+
+[networks.local]
+url = "http://localhost:20443"
+chain_id = "0001"
