@@ -1,7 +1,41 @@
+[project]
 name = "mindful-break-reminder"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Hammed <hamsohood@gmail.com>"]
+description = "A comprehensive mindful break reminder system with achievements and user progress tracking"
+requirements = []
+
+[contracts.mindful-break-reminder]
+path = "contracts/mindful-break-reminder.clar"
+clarity_version = 2
+epoch = 2.5
+
+[contracts.achievement-system]
+path = "contracts/achievement-system.clar"
+clarity_version = 2
+epoch = 2.5
+
+[networks.testnet]
+stacks_node_rpc_address = "https://stacks-node-api.testnet.stacks.co"
+stacks_node_p2p_address = "stacks-node-p2p.testnet.stacks.co:20444"
+bitcoin_node_rpc_address = "https://blockstream.info/testnet/api"
+
+[networks.mainnet]
+stacks_node_rpc_address = "https://stacks-node-api.mainnet.stacks.co"
+stacks_node_p2p_address = "stacks-node-p2p.mainnet.stacks.co:20444"
+bitcoin_node_rpc_address = "https://blockstream.info/api"
 
 [networks.local]
 url = "http://localhost:20443"
 chain_id = "0001"
+
+[repl]
+# Development settings
+signers = []
+
+[repl.analysis]
+# Enable contract analysis
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = true
